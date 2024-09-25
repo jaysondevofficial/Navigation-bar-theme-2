@@ -19,10 +19,12 @@
     width: 100%;
     padding: 10px 0;
     z-index: 1;
+    /* height: 340px; */
+    
     /* opacity: .5; */
     top: 0;
 
-    overflow: hidden;
+    /* overflow: hidden; */
     box-shadow: 0 5px 5px rgba(43, 21, 21, 0.1);
 }
 
@@ -47,6 +49,44 @@
     padding: 20px;
     gap: 20px;
 
+}
+.proj-dropdown{
+    position: relative;
+    display: inline-block;
+}
+.drop-item{
+    display: none;
+    position: absolute;
+    background-color: #40916C;
+    min-width: 160px;
+    min-height: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    /* margin: 20px; */
+    z-index: 1;
+    border-radius: 5px;
+  /* height: 650px; */
+}
+
+.drop-item li{
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+.drop-item li a{
+    text-decoration: none;
+    color: white;
+    letter-spacing: .2em;
+    
+}
+
+.drop-item hr{
+     opacity: .4;
+}
+
+.proj-dropdown:hover .drop-item{
+     display: block;
+   
+     
 }
 .container nav ul .nav-items{
   
@@ -95,6 +135,8 @@
     border-radius: 5px;
   
 }
+
+
 
 .container .content{
     background-image: linear-gradient(to right bottom,#40916C,#1B4332);
@@ -148,5 +190,42 @@
 .container .content .content-div .content-circle .content-img img{
     height: 200px;
     width: 200px;
+    
+}
+
+/* responsiveness of the navbar */
+@media only screen and (max-width: 792px) {
+
+   
+    .container nav ul{
+        display: none;
+    }
+    .container nav .hamburger-menu{
+        float: right;
+        padding: 20px;
+        margin-left: 32px;
+    }
+    .container nav .hamburger-menu a i{
+        color: white;
+        font-size: 1.5em;
+    }
+    .container nav  .hamburger-menu a:hover{
+
+        border-bottom: 4px solid white;
+        transition: .3s ease-in-out;
+    }
+    
+}
+
+/* laptop or pc responsiveness */
+
+@media only screen  and (min-width: 793px){
+    
+    .container nav .hamburger-menu{
+        display: none;
+    }
+    .container nav ul{
+        display: flex;
+    };
     
 }
